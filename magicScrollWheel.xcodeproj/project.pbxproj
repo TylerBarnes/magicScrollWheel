@@ -34,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		26014A92EF1C7639C2DA70C5 /* Pods-magicScrollWheel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicScrollWheel.release.xcconfig"; path = "Target Support Files/Pods-magicScrollWheel/Pods-magicScrollWheel.release.xcconfig"; sourceTree = "<group>"; };
+		42637C6B768F614777E8186C /* Pods-magicScrollWheel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicScrollWheel.debug.xcconfig"; path = "Target Support Files/Pods-magicScrollWheel/Pods-magicScrollWheel.debug.xcconfig"; sourceTree = "<group>"; };
 		4ED08F6E09D59D02D10B8F13 /* libPods-magicScrollWheel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-magicScrollWheel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		881F232D2337808A008DA53A /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		883D770423376E3E00D66A8D /* BezierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierView.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		88E7EEA12340EF1100151D57 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		88E7EEA32341129300151D57 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		88FBF179243A148500DCE48D /* SyncStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStep.swift; sourceTree = "<group>"; };
-		9E157F3B5291ACE782FCC1D0 /* Pods-magicScrollWheel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicScrollWheel.debug.xcconfig"; path = "Target Support Files/Pods-magicScrollWheel/Pods-magicScrollWheel.debug.xcconfig"; sourceTree = "<group>"; };
+		D6D2941E63D9FD07397660DB /* Pods-magicScrollWheel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-magicScrollWheel.release.xcconfig"; path = "Target Support Files/Pods-magicScrollWheel/Pods-magicScrollWheel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +83,16 @@
 				4ED08F6E09D59D02D10B8F13 /* libPods-magicScrollWheel.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81253E511837C476ADE21DC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42637C6B768F614777E8186C /* Pods-magicScrollWheel.debug.xcconfig */,
+				D6D2941E63D9FD07397660DB /* Pods-magicScrollWheel.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		88108C49247ABA5900C84052 /* Extensions */ = {
@@ -109,8 +119,8 @@
 			children = (
 				88D361A02251408700426432 /* magicScrollWheel */,
 				88D3619F2251408700426432 /* Products */,
-				C901B485CBFD7316C7D3D31F /* Pods */,
 				7F40EE56D940FA8F6B8D21DC /* Frameworks */,
+				81253E511837C476ADE21DC0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,15 +183,6 @@
 				88AA0FB723CB5EAB001A9B18 /* AccessibilityRequestViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		C901B485CBFD7316C7D3D31F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9E157F3B5291ACE782FCC1D0 /* Pods-magicScrollWheel.debug.xcconfig */,
-				26014A92EF1C7639C2DA70C5 /* Pods-magicScrollWheel.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +441,7 @@
 		};
 		88D361AF2251408700426432 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E157F3B5291ACE782FCC1D0 /* Pods-magicScrollWheel.debug.xcconfig */;
+			baseConfigurationReference = 42637C6B768F614777E8186C /* Pods-magicScrollWheel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = magicScrollWheel/magicScrollWheel.entitlements;
@@ -459,7 +460,7 @@
 		};
 		88D361B02251408700426432 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26014A92EF1C7639C2DA70C5 /* Pods-magicScrollWheel.release.xcconfig */;
+			baseConfigurationReference = D6D2941E63D9FD07397660DB /* Pods-magicScrollWheel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = magicScrollWheel/magicScrollWheel.entitlements;

@@ -166,6 +166,7 @@ public class MagicScrollController {
     
     private var _currentLocation: CGPoint?
     private var isShiftPressed = false;
+    private var isNonShiftModifierPressed = false;
     private var direction = 1 {
         willSet{
             if newValue != direction {
@@ -261,6 +262,9 @@ public class MagicScrollController {
     }
     
     @objc func sendEvent() {
+        if (self.isNonShiftModifierPressed) {
+            return
+        }
         
         //  guard let ev = self.scrollEvent else { return }
         let ev = self.scrollEvent
@@ -332,6 +336,9 @@ public class MagicScrollController {
     /// - Parameter event:
     @objc func systemScrollEventHandler(event: CGEvent)
     {
+        if (self.isNonShiftModifierPressed) {
+            return
+        }
         print("🌴onSystemScrollEvent🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴🌴\n_____________________________________________\n")
        // scrolledPixelsBuffer = 0
         self.syncRepeat = 0
@@ -395,6 +402,7 @@ public class MagicScrollController {
         self.currentLocation = event.location
         if event.type == .flagsChanged {
             isShiftPressed = event.flags.contains(.maskShift)
+            isNonShiftModifierPressed = isShiftPressed == false && (event.flags.contains(.maskCommand) || event.flags.contains(.maskControl) || event.flags.contains(.maskAlternate) || event.flags.contains(.maskSecondaryFn))
         }
     }
     
